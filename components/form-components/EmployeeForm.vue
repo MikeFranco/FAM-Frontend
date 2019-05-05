@@ -8,11 +8,17 @@
         <h1>Form</h1>
         <form class="" action="index.html" method="post">
 
-          <label for="">Nombre(s)</label>
-          <input placeholder="Nombre(s)" type="text">
+          <label for="">Name</label>
+          <input placeholder="Name" type="text" name="" value="">
 
-          <label for="">Apellidos</label>
-          <input placeholder="Apellidos" type="text">
+          <label for="">Last Name</label>
+          <input placeholder="Last Name" type="text" name="" value="">
+
+          <label for="">Ocuppation</label>
+          <input placeholder="Occupation" type="text" name="" value="">
+
+          <label for="">Entry</label>
+          <input placeholder="Entry" type="text" name="" value="">
 
         </form>
       </div>

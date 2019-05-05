@@ -10,7 +10,7 @@
           </div>
         </section>
     </section>
-    <section class="container2" @click="goToStudent">
+    <section class="container2" @click="goToEmployee">
       <section class="card">
         <div> <h1> Profesores </h1> </div>
       </section>
@@ -24,6 +24,9 @@ export default {
   methods:{
     goToStudent(){
       this.$router.push('/students')
+    },
+    goToEmployee(){
+      this.$router.push('/employee')
     }
   }
 }

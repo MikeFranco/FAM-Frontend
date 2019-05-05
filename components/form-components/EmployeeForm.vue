@@ -8,35 +8,41 @@
         <h1>Inicio de sesión</h1>
         <form class="" action="index.html" method="post">
 
-          <label for="">Nombre(s)</label>
-          <input placeholder="Nombre(s)" type="text">
+          <label>Nombre(s)</label>
+          <input placeholder="Nombre(s)" type="text" v-validate="require">
 
-          <label for="">Apellidos</label>
-          <input placeholder="Apellidos" type="text">
+          <label>Apellidos</label>
+          <input placeholder="Apellidos" type="text" v-validate="require">
 
-          <label for="">¿Ocupación?</label>
+          <label>¿Ocupación?</label>
           <select
             class="form-control custom-select fix-select-styles"
-            v-model="area">
+            v-model="area"
+            v-validate="require"
+            style="border: 1px solid black;">
             <option disabled value="">Seleccione una opción</option>
             <option>Profesor</option>
-            <option>Secretario </option>
-            <option>Contador </option>
-            <option>Doctor </option>
-            <option>Comerciante </option>
-            <option>Agricultor </option>
-            <option>Administrador </option>
-            <option>Otro </option>
+            <option>Secretario</option>
+            <option>Contador</option>
+            <option>Doctor</option>
+            <option>Comerciante</option>
+            <option>Agricultor</option>
+            <option>Administrador</option>
+            <option>Ingeniero</option>
+            <option>Otro</option>
             </select>
-
-          <label for="">¿Trabajas?</label>
-          <select
-            class="form-control custom-select fix-select-styles"
-            v-model="employee">
-            <option disabled value="">Seleccione una opción</option>
-            <option>Si</option>
-            <option>No</option>
-          </select>
+          <div class="form-row">
+            <div class="form-group register-input col-md-12">
+              <label v-if="area == 'Otro'" >¿Cuál es tu ocupación?</label>
+              <input
+                v-if="area == 'Otro'"
+                placeholder="Ocupación"
+                type="text"
+                v-validate="require"
+                v-model="otherValue"
+                class="form-control place-found">
+            </div>
+          </div>
 
         </form>
       </div>
@@ -49,8 +55,7 @@
 export default {
   data(){
     return{
-      foraneo: 'Selecciona una opción',
-      employee: 'Selecciona una opción',
+      area: 'Selecciona una opción',
     }
   }
 }
@@ -115,8 +120,8 @@ label{
 
 .form-control {
   height: 50px;
-  border-color: black;
-  border-radius: 15px;
+  /* background-color: black; */
+  border: 3px;
 }
 
 

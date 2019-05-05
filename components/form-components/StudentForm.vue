@@ -17,7 +17,8 @@
           <label for="">¿Eres foráneo?</label>
           <select
             class="form-control custom-select fix-select-styles"
-            v-model="foraneo">
+            v-model="foraneo"
+            style="border: 1px solid black;">
             <option disabled value="">Seleccione una opción</option>
             <option>Si</option>
             <option>No</option>
@@ -26,7 +27,8 @@
           <label for="">¿Trabajas?</label>
           <select
             class="form-control custom-select fix-select-styles"
-            v-model="employee">
+            v-model="employee"
+            style="border: 1px solid black;">
             <option disabled value="">Seleccione una opción</option>
             <option>Si</option>
             <option>No</option>

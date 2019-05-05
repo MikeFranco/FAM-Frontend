@@ -1,6 +1,0 @@
----
-applications:
-- buildpack: https://github.com/cloudfoundry/staticfile-buildpack
-  name: fam
-  random-route: true
-  memory: 56M

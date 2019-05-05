@@ -5,7 +5,7 @@
       <video autoplay muted loop src="./b.mp4"></video>
       <div class="content">
       <div class="con-img" > <img src="~/assets/logos/fam.jpeg" class="imagen"> </div>
-        <h1>Form</h1>
+        <h1>Inicio de sesión</h1>
         <form class="" action="index.html" method="post">
 
           <label for="">Nombre(s)</label>
@@ -13,6 +13,24 @@
 
           <label for="">Apellidos</label>
           <input placeholder="Apellidos" type="text">
+
+          <label for="">¿Eres foráneo?</label>
+          <select
+            class="form-control custom-select fix-select-styles"
+            v-model="foraneo">
+            <option disabled value="">Seleccione una opción</option>
+            <option>Si</option>
+            <option>No</option>
+            </select>
+
+          <label for="">¿Trabajas?</label>
+          <select
+            class="form-control custom-select fix-select-styles"
+            v-model="employee">
+            <option disabled value="">Seleccione una opción</option>
+            <option>Si</option>
+            <option>No</option>
+          </select>
 
         </form>
       </div>
@@ -23,7 +41,12 @@
 
 <script>
 export default {
-
+  data(){
+    return{
+      foraneo: 'Selecciona una opción',
+      employee: 'Selecciona una opción',
+    }
+  }
 }
 </script>
 
@@ -83,5 +106,13 @@ label{
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.form-control {
+  height: 50px;
+
+  border-radius: 3px;
+}
+
+
 
 </style>

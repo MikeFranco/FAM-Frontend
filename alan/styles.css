@@ -1,8 +1,7 @@
-
 body{
   padding: 0;
   margin:0 ;
-  font-family: 'Poppins'
+  font-family: 'Poppins', sans-serif;
 }
 .banner{
   width: 100%;
@@ -31,12 +30,12 @@ body{
 
 .content{
   margin: 1em;
-  width: 33%;
+  width: 24%;
   height: 40%;
   border: double #070707;
   border-radius: 30px;
   background-color:rgba(239,239,239,0.4);
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 6px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 label{

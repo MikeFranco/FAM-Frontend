@@ -15,15 +15,30 @@
         <div> <h1 align="center"> Profesores </h1> </div>
       </section>
     </section>
+    <section class="form" >
+      <transition name="fade" >
+        <StudentForm v-if="show" class="form-student"/>
+      </transition>
+    </section>
   </div>
 </template>
 
 <script>
+import StudentForm from '~/components/form-components/StudentForm.vue';
 
 export default {
+  components:{
+    StudentForm
+  },
+  data(){
+    return{
+      show: false
+    }
+  },
   methods:{
     goToStudent(){
-      this.$router.push('/students')
+      //this.$router.push('/students')
+      this.show = true;
     },
     goToEmployee(){
       this.$router.push('/employee')
@@ -33,7 +48,12 @@ export default {
 </script>
 
 <style scoped>
+.form-student {
+  position: absolute;
+  top: 60%;
+  left: 30%;
 
+}
 .container {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
@@ -81,4 +101,13 @@ export default {
   top: 0%;
   left: 37%;
 }
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 </style>

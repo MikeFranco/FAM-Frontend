@@ -1,15 +1,12 @@
 <template>
   <section>
-    <Form />
+    <h1>Hola desde el component Form</h1>
   </section>
 </template>
 
 <script>
-import Form from "~/components/employee-components/Form.vue"
 export default {
-  components:{
-    Form
-  }
+
 }
 </script>
 

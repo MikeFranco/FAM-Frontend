@@ -3,16 +3,16 @@
     <div>
       <h1>FAM</h1>
     </div>
-    <section class="container" >
+    <section class="container" @click="goToStudent" >
         <section class="card">
-          <div @click="goToStudent">
+          <div>
             <h1 > Estudiante </h1>
           </div>
         </section>
     </section>
-    <section class="container2">
+    <section class="container2" @click="goToStudent">
       <section class="card">
-        <div> <h1 @click="goToStudent"> Profesores </h1> </div>
+        <div> <h1> Profesores </h1> </div>
       </section>
     </section>
   </div>
@@ -23,7 +23,7 @@
 export default {
   methods:{
     goToStudent(){
-      this.$noty.error('¡Ups! Parece que hubo un error')
+      this.$router.push('/students')
     }
   }
 }

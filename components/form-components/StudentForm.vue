@@ -4,6 +4,7 @@
     <div class="banner">
       <video autoplay muted loop src="./b.mp4"></video>
       <div class="content">
+      <div class="con-img" > <img src="~/assets/logos/fam.jpeg" class="imagen"> </div>
         <h1>Form</h1>
         <form class="" action="index.html" method="post">
 
@@ -37,7 +38,7 @@ export default {
 body{
   padding: 0;
   margin:0 ;
-  font-family: 'Poppins'
+  font-family: 'Poppins', sans-serif;
 }
 .banner{
   width: 100%;
@@ -66,16 +67,27 @@ body{
 
 .content{
   margin: 1em;
-  width: 33%;
+  width: 24%;
   height: 40%;
   border: double #070707;
   border-radius: 30px;
   background-color:rgba(239,239,239,0.4);
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 6px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 label{
   display: block;
+}
+
+.imagen{
+  width: 150px;
+  height: 150px;
+  border-radius: 25px;
+}
+
+.con-img{
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 </style>

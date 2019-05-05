@@ -1,6 +1,6 @@
 # fam-frontend
 
-> Frontend para el proyecto fam
+> Frontend para el proyecto FAM (Fondo de Ahorro Mexicano)
 
 ## Build Setup
 

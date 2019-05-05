@@ -17,18 +17,18 @@
     </section>
     <section class="form" >
       <transition name="fade" >
-        <StudentForm v-if="show" class="form-student"/>
+        <PurposeOfSaving v-if="show" class="form-student"/>
       </transition>
     </section>
   </div>
 </template>
 
 <script>
-import StudentForm from '~/components/form-components/StudentForm.vue';
+import PurposeOfSaving from '~/components/general-components/PurposeOfSaving.vue';
 
 export default {
   components:{
-    StudentForm
+    PurposeOfSaving
   },
   data(){
     return{
@@ -37,8 +37,8 @@ export default {
   },
   methods:{
     goToStudent(){
-      //this.$router.push('/students')
-      this.show = true;
+      this.$router.push('/students')
+      //this.show = true;
     },
     goToEmployee(){
       this.$router.push('/employee')

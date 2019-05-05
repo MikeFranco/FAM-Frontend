@@ -1,14 +1,14 @@
 <template>
   <section>
-    <Form />
+    <EmployeeForm />
   </section>
 </template>
 
 <script>
-import Form from "~/components/employee-components/Form.vue"
+import EmployeeForm from "~/components/form-components/EmployeeForm.vue"
 export default {
   components:{
-    Form
+    EmployeeForm
   }
 }
 </script>

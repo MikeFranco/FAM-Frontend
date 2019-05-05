@@ -5,20 +5,38 @@
       <video autoplay muted loop src="./b.mp4"></video>
       <div class="content">
       <div class="con-img" > <img src="~/assets/logos/fam.jpeg" class="imagen"> </div>
-        <h1>Form</h1>
+        <h1>Inicio de sesión</h1>
         <form class="" action="index.html" method="post">
 
-          <label for="">Name</label>
-          <input placeholder="Name" type="text" name="" value="">
+          <label for="">Nombre(s)</label>
+          <input placeholder="Nombre(s)" type="text">
 
-          <label for="">Last Name</label>
-          <input placeholder="Last Name" type="text" name="" value="">
+          <label for="">Apellidos</label>
+          <input placeholder="Apellidos" type="text">
 
-          <label for="">Ocuppation</label>
-          <input placeholder="Occupation" type="text" name="" value="">
+          <label for="">¿Ocupación?</label>
+          <select
+            class="form-control custom-select fix-select-styles"
+            v-model="area">
+            <option disabled value="">Seleccione una opción</option>
+            <option>Profesor</option>
+            <option>Secretario </option>
+            <option>Contador </option>
+            <option>Doctor </option>
+            <option>Comerciante </option>
+            <option>Agricultor </option>
+            <option>Administrador </option>
+            <option>Otro </option>
+            </select>
 
-          <label for="">Entry</label>
-          <input placeholder="Entry" type="text" name="" value="">
+          <label for="">¿Trabajas?</label>
+          <select
+            class="form-control custom-select fix-select-styles"
+            v-model="employee">
+            <option disabled value="">Seleccione una opción</option>
+            <option>Si</option>
+            <option>No</option>
+          </select>
 
         </form>
       </div>
@@ -29,7 +47,12 @@
 
 <script>
 export default {
-
+  data(){
+    return{
+      foraneo: 'Selecciona una opción',
+      employee: 'Selecciona una opción',
+    }
+  }
 }
 </script>
 
@@ -89,5 +112,13 @@ label{
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.form-control {
+  height: 50px;
+  border-color: black;
+  border-radius: 15px;
+}
+
+
 
 </style>

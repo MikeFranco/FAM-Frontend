@@ -109,8 +109,8 @@ label{
 
 .form-control {
   height: 50px;
-
-  border-radius: 3px;
+  border-color: black;
+  border-radius: 15px;
 }
 
 
